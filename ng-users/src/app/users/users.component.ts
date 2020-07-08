@@ -27,10 +27,10 @@ export class UsersComponent implements OnInit {
   // 5. Create a local wrapper for
   getUsers(): void {
     this.usersService.getUsers().subscribe(
-      (response) => {
-        this.users = response,
-        console.log(this.users)
+      (response:any) => {
+        this.users = response.users
+        //console.log(this.users)
       }
     );
+    }
   }
-}
